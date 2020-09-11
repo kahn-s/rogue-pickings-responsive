@@ -12,7 +12,6 @@ body {
 .container{
 	max-width: 75em;
 	width: 90%;
-	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -26,40 +25,34 @@ h4 {
 	color: black;
 	text-transform: uppercase;
 	font-weight: 700;
-}
-h1 {
-	font-size: 1.87em;
-}
-h2 {
-    font-size: 1.5em ;
-}
-h3 {
-	font-size: 1.12em;
-}
-h4 {
-	font-size: 0.75em ;
+
 }
 
 p {
 	font-size: 0.875em;
 	line-height: 1.3em;
-    padding: 0 1.875em;
+}
+ul{
+	margin: 0;
 }
 
 /*The widths are in a percentage!*/
 header {
-	border-bottom: 0.188em solid #77a466;
-	margin: 0 auto;
+
+	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
+	width: 100%;
 }
 
 header h1 {
-	
+	font-size: 1.875em;
 	margin: 0;
-	padding: 2.375em 0;
+	padding: 2em 1em 1em 1em;
+	width:100%;
+	border-bottom: 3px solid #77a466;
 }
 header h1 span {
 	color: #77a466;
@@ -67,7 +60,8 @@ header h1 span {
 
 header nav {
 	
-	padding: 2.875em 0;
+	padding: 20px 0;
+	width: 100%;
 }
 header nav ul {
 	margin: 0 ;
@@ -78,11 +72,9 @@ header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 0.875em;
-	padding: 0 0.625em;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	
+	padding: 0.625em 0;
+	list-style-type: none;
+
 }
 header nav ul li a{
 	text-decoration: none;
@@ -91,7 +83,7 @@ header nav ul li a{
 
 /*The widths are in a percentage!*/
 .top-section{
-	margin: 0 auto;
+	
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -99,9 +91,9 @@ header nav ul li a{
 }
 
 .bottom-section{
-	margin: 0;
+	
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: flex-start;
 	flex-flow: row wrap;
 	
@@ -109,17 +101,17 @@ header nav ul li a{
 }
 .main-image img {
 	width: 100%;
-	border-bottom: 0.188em solid #77a466;
+	padding-top:1em;
+	border-bottom: 3px solid #77a466;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: row wrap;
+	
 }
 
 
 .main-title h3 {
 	text-align: left;
 	padding: 0.313em  0;
+	font-size: 1.25em;
 	color: #77a466;
 }
 .main-title p {
@@ -132,22 +124,10 @@ header nav ul li a{
 .section-two,
 .section-three {
 	
-	border-top: .06em solid #eee;
+	border-top: 1px solid #eee;
+	width: 100%;
 }
 
-.section-one h4 {
-	padding: .625em 0;
-}
-
-.section-two {
-	border-left: .06em solid #eee;
-	border-right: .06em solid #eee;
-}
-
-.section-two h4,
-.section-three h4 {
-	padding: .625em 1.875em;
-}
 
 .menu {
 	list-style: none;
@@ -177,6 +157,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
 	
 }
 footer span {
@@ -185,4 +166,41 @@ footer span {
 	color: #77a466;
 	font-size: .875em;
 }
+/***************  Tablet  *****************/
+@media only screen and (min-width: 768px){
+.bottom-section{
 
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-flow: row nowrap;
+	}
+.section-one, .section-two, .section-three{
+	border-top: none;
+	flex-basis: 30%;
+	}
+
+}
+
+/***************  Desktop  ****************/
+@media only screen and (min-width:1200px){
+	header{
+		text-align: left;
+		justify-content: space-between;
+
+	}
+	header h1{
+		padding:0;
+		border-bottom: none;
+		width: 30%;
+	}
+	header nav{
+		width: 50%;
+	}
+		
+	}
+	header nav ul{
+		display: flex;
+		justify-content: space-between;
+	}
+}
